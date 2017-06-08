@@ -22,6 +22,7 @@ class TodoApp extends React.Component {
   render() {
     return (
       <div>
+        <h1>Entities</h1>
         <section className="todoapp">
           <TodoList viewer={this.props.viewer} />
         </section>
