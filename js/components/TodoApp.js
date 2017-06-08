@@ -23,6 +23,7 @@ class TodoApp extends React.Component {
     return (
       <div>
         <h1>Entities</h1>
+        <div>user id: {this.props.viewer.id}</div>
         <section className="todoapp">
           <TodoList viewer={this.props.viewer} />
         </section>
@@ -37,6 +38,7 @@ export default createFragmentContainer(TodoApp, {
     fragment TodoApp_viewer on User {
       ...TodoList_viewer,
       totalCount
+      id
     }
   `,
 });
