@@ -4,7 +4,7 @@ This is just simple practice based on todo-modern.
 ## Installation
 
 ```
-npm install
+yarn install
 ```
 
 ## Running
@@ -12,14 +12,14 @@ npm install
 Set up generated files:
 
 ```
-npm run update-schema
-npm run build
+yarn run update-schema
+yarn run build
 ```
 
 Start a local server:
 
 ```
-npm start
+yarn start
 ```
 
 ## Developing
@@ -31,7 +31,7 @@ If at any time you make changes to `data/schema.js`, stop the server,
 regenerate `data/schema.graphql`, and restart the server:
 
 ```
-npm run update-schema
-npm run build
-npm start
+yarn run update-schema
+yarn run build
+yarn start
 ```
