@@ -33,8 +33,6 @@ class TodoApp extends React.Component {
 export default createFragmentContainer(TodoApp, {
   viewer: graphql`
     fragment TodoApp_viewer on User {
-      id,
-      totalCount,
       ...TodoList_viewer,
     }
   `,

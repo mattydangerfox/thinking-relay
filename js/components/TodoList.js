@@ -52,11 +52,7 @@ export default createFragmentContainer(TodoList, {
             ...Todo_todo,
           },
         },
-      },
-      id,
-      totalCount,
-      completedCount,
-      ...Todo_viewer,
+      }
     }
   `,
 });

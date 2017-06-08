@@ -17,22 +17,17 @@ import {
 import classnames from 'classnames';
 
 class Todo extends React.Component {
-  state = {
-    isEditing: false,
-  };
   render() {
     return (
       <li
         className={classnames({
-          completed: this.props.todo.complete,
-          editing: this.state.isEditing,
+          completed: this.props.todo.complete
         })}>
         <div className="view">
           <label>
             {this.props.todo.text}
           </label>
         </div>
-        {this.state.isEditing && this.renderTextInput()}
       </li>
     );
   }
@@ -45,12 +40,5 @@ export default createFragmentContainer(Todo, {
       id,
       text,
     }
-  `,
-  viewer: graphql`
-    fragment Todo_viewer on User {
-      id,
-      totalCount,
-      completedCount,
-    }
-  `,
+  `
 });
