@@ -33,6 +33,7 @@ class TodoTextInput extends React.Component {
         placeholder={this.props.placeholder}
         onChange={this._handleChange}
         onKeyDown={this._handleKeyDown}
+        value={this.state.text}
       />
     );
   }
