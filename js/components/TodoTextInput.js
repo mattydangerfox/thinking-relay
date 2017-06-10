@@ -12,8 +12,8 @@ class TodoTextInput extends React.Component {
   render() {
     return (
       <input
-      className={this.props.className}
-      placeholder={this.props.placeholder}
+        className={this.props.className}
+        placeholder={this.props.placeholder}
       />
     );
   }
