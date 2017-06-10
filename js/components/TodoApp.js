@@ -10,6 +10,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+import AddTodoMutation from '../mutations/AddTodoMutation';
 import TodoList from './TodoList';
 import TodoTextInput from './TodoTextInput';
 
@@ -22,6 +23,11 @@ import {
 class TodoApp extends React.Component {
   _handleTextInputSave = (text) => {
     console.log(`TodoApp: _handleTextInputSave: ${text}`);
+    AddTodoMutation.commit(
+      this.props.relay.environment,
+      text,
+      this.props.viewer,
+    );
   };
 
   render() {
