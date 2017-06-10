@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 
-export default class TodoTextInput extends React.Component {
+class TodoTextInput extends React.Component {
+
   componentDidMount() {
     ReactDOM.findDOMNode(this).focus();
   }
@@ -16,3 +18,10 @@ export default class TodoTextInput extends React.Component {
     );
   }
 }
+
+TodoTextInput.propTypes = {
+  className: PropTypes.string,
+  placeholder: PropTypes.string,
+};
+
+export default TodoTextInput;
