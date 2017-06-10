@@ -20,13 +20,21 @@ import {
 } from 'react-relay';
 
 class TodoApp extends React.Component {
+  _handleTextInputSave = (text) => {
+    console.log(`TodoApp: _handleTextInputSave: ${text}`);
+  };
+
   render() {
     return (
       <div>
         <h1>Entities</h1>
         <div>user id: {this.props.viewer.id}</div>
         <section className="todoapp">
-          <TodoTextInput className="new-entity" placeholder="what's the entity name?"/>
+          <TodoTextInput
+            className="new-entity"
+            placeholder="what's the entity name?"
+            onSave={this._handleTextInputSave}
+          />
           <TodoList viewer={this.props.viewer} />
         </section>
         <div>You have {this.props.viewer.totalCount} entities.</div>
