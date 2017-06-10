@@ -5,6 +5,10 @@ import PropTypes from 'prop-types';
 
 class TodoTextInput extends React.Component {
 
+  _handleChange = (e) => {
+    console.log(`TodoTextInput: value: ${e.target.value}`);
+  };
+
   componentDidMount() {
     ReactDOM.findDOMNode(this).focus();
   }
@@ -14,6 +18,7 @@ class TodoTextInput extends React.Component {
       <input
         className={this.props.className}
         placeholder={this.props.placeholder}
+        onChange={this._handleChange}
       />
     );
   }
