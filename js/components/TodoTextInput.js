@@ -13,6 +13,6 @@ export default class TodoTextInput extends React.Component {
       className={this.props.className}
       placeholder={this.props.placeholder}
       />
-    )
+    );
   }
-};
+}
