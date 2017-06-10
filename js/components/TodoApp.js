@@ -11,6 +11,7 @@
  */
 
 import TodoList from './TodoList';
+import TodoTextInput from './TodoTextInput';
 
 import React from 'react';
 import {
@@ -25,6 +26,7 @@ class TodoApp extends React.Component {
         <h1>Entities</h1>
         <div>user id: {this.props.viewer.id}</div>
         <section className="todoapp">
+          <TodoTextInput className="new-entity" placeholder="what's the entity name?"/>
           <TodoList viewer={this.props.viewer} />
         </section>
         <div>You have {this.props.viewer.totalCount} entities.</div>
