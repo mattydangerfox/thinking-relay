@@ -17,7 +17,7 @@ class TodoTextInput extends React.Component {
 
   _handleKeyDown = (e) => {
     if (e.keyCode === ENTER_KEY_CODE) {
-      this.props.onSave(this.state.text);
+      this.props.onSave(this.state.text.trim());
       this.setState({text: ''});
     }
   };
