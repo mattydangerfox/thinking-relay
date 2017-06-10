@@ -24,7 +24,6 @@ class TodoList extends React.Component {
       <Todo
         key={edge.node.id}
         todo={edge.node}
-        viewer={this.props.viewer}
       />
     );
   }

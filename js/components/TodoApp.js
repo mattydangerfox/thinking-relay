@@ -22,10 +22,12 @@ class TodoApp extends React.Component {
   render() {
     return (
       <div>
-        <h1>Entity management</h1>
+        <h1>Entities</h1>
+        <div>user id: {this.props.viewer.id}</div>
         <section className="todoapp">
           <TodoList viewer={this.props.viewer} />
         </section>
+        <div>You have {this.props.viewer.totalCount} entities.</div>
       </div>
     );
   }
@@ -35,6 +37,8 @@ export default createFragmentContainer(TodoApp, {
   viewer: graphql`
     fragment TodoApp_viewer on User {
       ...TodoList_viewer,
+      totalCount
+      id
     }
   `,
 });
